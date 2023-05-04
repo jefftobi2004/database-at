@@ -1,0 +1,43 @@
+1) Afișați toate informațiile produselor care costă mai puțin de 30 de dolari și ordonați-le descrescător în funcție de preț.
+
+2) Afișați ID-ul comenzilor care au fost procesate dar încă nu livrate.
+
+3) Construiți o nouă tabelă cu numele Comenzi_livrate având ca și câmpuri numele și prenumele clienților, datele în care comenzile au fost plasate 
+și livrate și expeditorul acestora, cu condiția ca produsele comenzii să fi fost expediate sau livrate.
+
+4) Afișați produsele care oferă între 10 și 150 de puncte (`bonus points`) și ordonați-le crescător în funcție de preț.
+
+5) Afișați informațiile clienților care se află în statele cu inițialele MA, TX și IL și care au numărul de telefon înregistrat.
+
+6) Atribuiți valorile corespunzătoare câmpurilor `total_price` și `total_points` tabelului `order_items` folosind următoarele reguli și restricții:
+
+	-câmpul total_price va fi calculat prin înmulțirea cantității comandate cu costul produsului, id-ul acestuia fiind precizat în coloana `product_id`
+	( Spre ex: În comanda cu ID-ul 1, produsul cu ID-ul 4 are prețul egal cu 6,99 iar cantitatea comandată este de 4 bucăți. Asta înseamnă că prețul
+	total pe produs este de 4 * 6,99 = 27,96 )
+
+	-asemănător câmpului `total_price`, câmpul `total_points` va fi calculat prin înmulțirea cantității cu numărul de puncte specifice produsului cu ID-ul
+	precizat în coloana `product_id` (Spre ex: Produsul cu ID-ul 4 din comanda 1 este comandat de 4 ori, iar o bucată oferă 50 de puncte. Astfel, punctele
+	totale acumulate pe produs vor fi de 4 * 50 = 200 de puncte)
+
+7) Calculați punctele de fidelitate ale clienților (fidelity_points) din tabela customers urmărind următoarea regulă:
+
+Punctele de fidelitate vor fi calculate ca suma punctelor din tabela `order_items` cu ID-ul comenzilor corespunzătoare clientului.
+( Spre ex: Clientul cu ID-ul 1 are atribuite comenzile cu id-urile 11 și 12. În tabela `order_items` se va face suma tuturor valorilor din câmpul
+`total_points` unde câmpul `order_id` este egal cu valorile comenzilor corespunzătoare clientului - în cazul nostru 11 și 12. Pentru comenzile
+11 și 12 avem punctele totale în valoare de 120, 750, 2000, 40 și 180. Suma acestora este egală cu 3090 și reprezintă punctele de fidelitate ale clientului 1)
+
+8) Afisați clienții ale căror nume de familie (`last_name`) se termină cu literele "EY" sau "ON" și ordonați-i lexicografic după prenume (`first_name`).
+
+9) Determinați rangul clienților din tabela `customers` respectând următoarele reguli și restricții:
+	-Dacă punctele de fidelitate ale clientului sunt sub 1000 atunci rangul acestuia este 'Bronze'
+	-Dacă punctele de fidelitate ale clientului sunt între 1000 și 2000 atunci rangul acestuia este 'Silver'
+	-Dacă punctele de fidelitate ale clientului sunt între 2000 și 4000 atunci rangul acestuia este 'Gold'
+	-Dacă punctele de fidelitate ale clientului sunt peste 4000 atunci rangul acestuia este 'VIP'
+
+10) Ordonati clienții crescător în funcție de punctele de fidelitate și rangul acestora.
+
+
+
+
+
+
